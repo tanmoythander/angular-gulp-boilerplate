@@ -14,12 +14,12 @@ This project uses best practices and guides with integration of Gulp, Bower, Kar
 - Type `npm install -g node-inspector bower gulp`
 
 ## Installing Node.js and Bower Packages
-- Open terminal
+- Open terminal & navigate to project directory
 - Type `npm install`
 
 ## Installing Bower Packages
 `npm install` will install these too, but you can do it manually after updating bower.json.
-- Open terminal
+- Open terminal & navigate to project directory
 - Type `bower install`
 
 ## Development
@@ -31,11 +31,11 @@ This project uses best practices and guides with integration of Gulp, Bower, Kar
 - include your newly added bower dependency and libraries on karma.conf.js
 
 ## Running on local
-- Open terminal
+- Open terminal & navigate to project directory
 - Type `gulp serve`
 
 ## Building for deployment
-- Open terminal
+- Open terminal & navigate to project directory
 - Type `gulp build`
 
 The optimizations are performed by the gulp tasks and include the following list. See the `gulpfile.js` for details
