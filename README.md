@@ -21,6 +21,7 @@ This project uses best practices and guides with integration of Gulp, Bower, Kar
 `npm install` will install these too, but you can do it manually after updating bower.json.
 - Open terminal
 - Type `bower install`
+
 ## Development
 - Develop your angular front-end application in src/app/.. directory
 - For transation use the src/i18n/.. directory
@@ -28,9 +29,11 @@ This project uses best practices and guides with integration of Gulp, Bower, Kar
 - for css use the src/styles/.. directory
 - for storing libraries use src/lib/..
 - include your newly added bower dependency and libraries on karma.conf.js
+
 ## Running on local
 - Open terminal
 - Type `gulp serve`
+
 ## Building for deployment
 - Open terminal
 - Type `gulp build`
