@@ -22,7 +22,7 @@ you should see some version info in return.<br><br>
 
 	npm install -g bower gulp marked node-gyp
 
-in some cases you might need to mention "sudo"<br><br>
+in case of mac, you might need to mention "sudo"<br><br>
 
 
 <b>3. now go to the directory where you want to place the project files using git bash (terminal for mac)</b><br>
@@ -30,8 +30,7 @@ run the command
 
 	git clone URL
 
-here URL is the http url you get from the repository window, https://gitlab.com/quanticdynamics/qd-fe<br>
-Sometimes you might need to authenticate to your gitlab account<br><br>
+here URL is the http url you get from the repository window, https://gitlab.com/quanticdynamics/qd-fe<br><br>
 
 <b>4. now navigate to the project directory with cmd (terminal for mac)</b><br>
 run the command
