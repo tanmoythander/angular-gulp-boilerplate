@@ -1,58 +1,79 @@
-
-#AngularJS Front-end development with gulp automation
-
-This project uses best practices and guides with integration of Gulp, Bower, Karma, Mocha with task automation, testing and more.
+<h1>Angular Gulp Boilerplate</h1>
 
 
-## Prerequisite
+<h2>Installing on local machine</h2>
 
-- Install Node
-    - on OSX install [home brew](http://brew.sh/) and type `brew install node`
-    - on Windows install [chocolatey](https://chocolatey.org/) and type `choco install nodejs`
-- On OSX you can alleviate the need to run as sudo by [following these instructions](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md). I highly recommend this step on OSX
-- Open terminal
-- Type `npm install -g node-inspector bower gulp`
+<h4>Please make sure you have node.js installed on your machine</h4>
+If you don't have, <a href="https://nodejs.org/" >click here...</a>
+<br><br>
 
-## Installing Node.js and Bower Packages
-- Open terminal & navigate to project directory
-- Type `npm install`
 
-## Installing Bower Packages
-`npm install` will install these too, but you can do it manually after updating bower.json.
-- Open terminal & navigate to project directory
-- Type `bower install`
+<b>1. check if you have it installed or not</b>,
 
-## Development
-- Develop your angular front-end application in src/app/.. directory
-- For transation use the src/i18n/.. directory
-- for js files use the src/scripts/.. directory
-- for css use the src/styles/.. directory
-- for storing libraries use src/lib/..
-- include your newly added bower dependency and libraries on karma.conf.js
+	npm -v
 
-## Running on local
-- Open terminal & navigate to project directory
-- Type `gulp serve`
+and,
 
-## Building for deployment
-- Open terminal & navigate to project directory
-- Type `gulp build`
+	node -v
 
-The optimizations are performed by the gulp tasks and include the following list. See the `gulpfile.js` for details
+you should see some version info in return.<br><br>
 
-- eslint
-- preparing Angular's templatecache for html templates
-- concat task to bundle css and js, separately
-- Angular dependency injection annotations using ngAnnotate
-- uglify to minify and mangle javascript
-- source maps
-- css autoprefixer for vendor prefixes
-- minify css
-- optimize images
-- index.html injection for scripts and links
-- deploying all js, css, images, fonts, and index.html
+<b>2. install global packages</b>(run on any directory)
 
-## Testing
-Type `gulp test` to run the tests including both unit and midway tests (spins up a server). This will create a watch on the files, with a 5 second delay, to run the tests.
+	npm install -g bower gulp marked node-gyp
 
-Testing uses karma, mocha, chai, sinon, ngMidwayTester libraries.
+in some cases you might need to mention "sudo"<br><br>
+
+
+<b>3. now go to the directory where you want to place the project files using git bash (terminal for mac)</b><br>
+run the command
+
+	git clone URL
+
+here URL is the http url you get from the repository window, https://gitlab.com/quanticdynamics/qd-fe<br>
+Sometimes you might need to authenticate to your gitlab account<br><br>
+
+<b>4. now navigate to the project directory with cmd (terminal for mac)</b><br>
+run the command
+
+	npm install
+	
+wait for it to be completed. It usually takes 5-10 minutes to complete.<br>
+It will download all the dependencies, build the project and serve the build on browser<br><br>
+
+<h2>Using the gulp commands</h2>
+
+<b>1. Serve from source with watch (Development Mode)</b>
+
+	gulp
+
+you should see the browser window pointing on localhost:3000<br><br>
+
+<b>2. Build the source (Deployment Mode)</b>
+
+	gulp build
+
+it will delete previous build !!!<br><br>
+
+<b>3. Serve from source without watch (Source Testing Mode)</b>
+
+	gulp server
+
+you should see the browser window pointing on localhost:3000<br><br>
+
+<b>4. Serve from _build without watch (Build Testing Mode)</b>
+
+	gulp server-build
+
+you should see the browser window pointing on localhost:3000<br><br>
+
+<h2>Developer Hint</h2>
+
+Please change your editor configuration like below before you start development
+
+<b>Indent character</b>: "\t" (tab)
+
+<b>Indent size</b>: 2
+
+<b>Line endings</b>: LF (unix)
+

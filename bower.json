@@ -1,12 +1,12 @@
 {
-  "name": "gulp_angular",
-  "homepage": "https://github.com/tanmoythander/gulp-angular",
+  "name": "boilerplate",
+  "version": "0.0.0",
   "authors": [
-    "Tanmoy Thander <tanmoythander@gmail.com>"
+    "Tanmoy Thander"
   ],
-  "description": "",
-  "main": "",
-  "license": "N/A",
+  "description": "Front-end application boilerplate code",
+  "main": "app.js",
+  "license": "MIT",
   "private": false,
   "ignore": [
     "**/.*",
@@ -16,42 +16,10 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "2.1.4",
-    "chart.js": "^2.4.0",
-    "angular": "~1.5.8",
-    "angular-ui-router": "~0.3.0",
-    "angular-resource": "1.4.7",
-    "bootstrap": "3.3.5",
-    "jquery-migrate": "http://code.jquery.com/jquery-migrate-1.2.1.js",
-    "font-awesome": "~4.6.3",
-    "angularUtils-pagination": "angular-utils-pagination#~0.11.1",
-    "ng-lodash": "~0.5.0",
-    "angular-translate": "~2.11.0",
-    "angular-translate-loader-partial": "~2.11.0",
-    "angular-translate-storage-cookie": "~2.11.0",
-    "angular-translate-storage-local": "~2.11.0",
-    "angular-translate-handler-log": "~2.11.0",
-    "angular-translate-loader-static-files": "~2.11.0",
-    "angular-bootstrap": "~2.0.1",
-    "angular-messages": "~1.5.8",
-    "angular-chart.js": "^1.1.1",
-    "ngstorage": "~0.3.11",
-    "ng-file-upload-shim": "~12.2.9",
-    "ng-file-upload": "~12.2.9",
-    "angular-moment-picker": "moment-picker#~0.6.8",
-    "angular-summernote": "~0.8.1",
-    "angular-drag-and-drop-lists": "~2.0.0",
-    "ngMask": "angular-mask#~3.1.1",
-    "fullcalendar": "~2.9.1",
-    "angular-ui-calendar": "~1.0.2",
-    "fullcalendar-scheduler": "~1.3.3"
-  },
-  "devDependencies": {
-    "angular-mocks": "~1.5.6"
-  },
-  "resolutions": {
-    "jquery": "2.1.4",
-    "angular": "~1.5.8",
-    "fullcalendar": "~2.9.1"
+    "angular": "1.5.11",
+    "angular-ui-router": "^1.0.3",
+    "angular-resource": "~1.5.8",
+    "ngstorage": "^0.3.11",
+    "OwlCarousel": "https://github.com/OwlFonk/OwlCarousel.git#~1.3.2"
   }
 }

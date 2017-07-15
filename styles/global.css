@@ -1,0 +1,77 @@
+/* Font-face */
+@font-face {
+	font-family: "ubuntu_bold";
+	src: url("../fonts/Ubuntu-B.ttf");
+}
+@font-face {
+	font-family: "ubuntu_bold_italic";
+	src: url("../fonts/Ubuntu-BI.ttf");
+}
+@font-face {
+	font-family: "ubuntu_condensed";
+	src: url("../fonts/Ubuntu-C.ttf");
+}
+@font-face {
+	font-family: "ubuntu_light";
+	src: url("../fonts/Ubuntu-L.ttf");
+}
+@font-face {
+	font-family: "ubuntu_light_italic";
+	src: url("../fonts/Ubuntu-LI.ttf");
+}
+@font-face {
+	font-family: "ubuntu_medium";
+	src: url("../fonts/Ubuntu-M.ttf");
+}
+@font-face {
+	font-family: "ubuntu_medium_italic";
+	src: url("../fonts/Ubuntu-MI.ttf");
+}
+@font-face {
+	font-family: "ubuntu_regular";
+	src: url("../fonts/Ubuntu-R.ttf");
+}
+@font-face {
+	font-family: "ubuntu_regular_italic";
+	src: url("../fonts/Ubuntu-RI.ttf");
+}
+
+/* Typography */
+h1 {
+	font-family: "ubuntu_bold";
+}
+h2 {
+	font-family: "ubuntu_medium";
+}
+h3 {
+	font-family: "ubuntu_medium";
+}
+h4 {
+	font-family: "ubuntu_regular";
+}
+h5 {
+	font-family: "ubuntu_light";
+}
+h6 {
+	font-family: "ubuntu_light";
+}
+p {
+	font-family: "ubuntu_regular";
+}
+a {
+	font-family: "ubuntu_regular";
+}
+li {
+	font-family: "ubuntu_regular";
+}
+th {
+	font-family: "ubuntu_medium";
+}
+td {
+	font-family: "ubuntu_regular";
+}
+
+/* Others */
+.jumbotron {
+	margin-bottom: 0px;
+}

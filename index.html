@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" ng-csp="" ng-app="boilerplate">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<base href="/">
+		<title>AngularJS-Gulp</title>
+		<meta name="description" content="Web portal front-end app boilerplate code">
+
+		<!-- mobile meta -->
+		<meta name="tanmoythander" content="True">
+		<meta name="MobileOptimized" content="320">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+
+		<!-- CSS -->
+		<!-- build:css css/style.min.css -->
+
+		<!-- Library -->
+		<link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="styles/bootstrap-theme.css" />
+		<link rel="stylesheet" type="text/css" href="styles/font-awesome.css" />
+		<link rel="stylesheet" href="bower_components/OwlCarousel/owl-carousel/owl.carousel.css" />
+			<!-- Global CSS -->
+			<link rel="stylesheet" type="text/css" href="styles/global.css" />
+			<!-- Directive CSS -->
+			<link rel="stylesheet" type="text/css" href="styles/directive.css" />
+		<!-- endbuild -->
+
+	</head>
+
+	<body>
+
+		<!-- Main view for templates -->
+		<div ui-view></div>
+
+
+
+		<!-- Vendors -->
+		<!-- build:nonangularlibs js/nonangularlibs.js -->
+		<script type="text/javascript" src="js/nonangular/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/nonangular/bootstrap.js"></script>
+		<!-- endbuild -->
+
+		<!-- Non-angular libraries -->
+		<!-- build:libs js/libs.js -->
+		<script type="text/javascript" src="js/nonangular/lodash.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<script type="text/javascript" src="bower_components/OwlCarousel/owl-carousel/owl.carousel.min.js"></script>
+		<!-- endbuild -->
+
+		<!-- Angular external libraries for application -->
+		<!-- build:angularlibs js/angularlibs.js -->
+		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		<script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+		<script type="text/javascript" src="bower_components/ngstorage/ngStorage.js"></script>
+		<!-- endbuild -->
+
+		<!-- Angular components -->
+		<!-- build:appcomponents js/appcomponents.js -->
+		<script type="text/javascript" src="app/app.js"></script>
+		<script type="text/javascript" src="app/config.js"></script>
+
+			<!-- Services -->
+			<script type="text/javascript" src="components/services/LocalStorage.service.js"></script>
+			<script type="text/javascript" src="components/services/queryService.service.js"></script>
+
+			<!-- Common services -->
+			<script type="text/javascript" src="components/services/common/common.validation.js"></script>
+
+			<!-- Controllers -->
+			<script type="text/javascript" src="components/controllers/scotch.controller.js"></script>
+			<script type="text/javascript" src="components/controllers/list.controller.js"></script>
+
+			<!-- directives -->
+			<script type="text/javascript" src="components/directives/footer.directive.js"></script>
+		<!-- endbuild -->
+
+		<!-- Application sections -->
+		<!-- build:mainapp js/mainapp.js -->
+		<script type="text/javascript" src="app/factory.js"></script>
+		<script type="text/javascript" src="app/controller.js"></script>
+		<!-- endbuild -->
+
+		<!-- templates from $templateCache -->
+		<!-- build:templates -->
+		<!-- endbuild -->
+		
+		<!-- Google Analytics: change QUANTIC-DYNAMICS-PORTAL to be your site's ID. -->
+		<script>
+			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+			e.src='https://www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+			ga('create','YOUR-SITE-ID','auto');ga('send','pageview');
+			// Replace YOUR-SITE-ID with the one you want
+		</script>
+
+	</body>
+
+</html>
