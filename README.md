@@ -30,7 +30,7 @@ run the command
 
 	git clone URL
 
-here URL is the http url you get from the repository window, https://gitlab.com/quanticdynamics/qd-fe<br><br>
+here URL is the http url you get from the repository page, <a href="https://github.com/tanmoythander/angular-gulp-boilerplate">Click here to clone</a><br><br>
 
 <b>4. now navigate to the project directory with cmd (terminal for mac)</b><br>
 run the command

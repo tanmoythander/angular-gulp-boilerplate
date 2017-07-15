@@ -1,6 +1,6 @@
 {
   "name": "boilerplate",
-  "version": "0.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "description": "Front-end application source boilerplate",
   "main": "app/app.js",
@@ -42,14 +42,12 @@
     "postinstall": "npm install gulp-sass gulp-imagemin --save&&bower install --no-interactive&&gulp server-build"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "github",
+    "url": "https://github.com/tanmoythander/angular-gulp-boilerplate"
   },
   "author": "Tanmoy Thander",
   "dependencies": {
     "gulp-imagemin": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "marked": "0.3.6",
-    "node-gyp": "3.6.2"
+    "gulp-sass": "^3.1.0"
   }
 }
