@@ -7,6 +7,6 @@
 	ListController.$inject = ['$scope'];
 
 	function ListController($scope) {
-		$scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
+		$scope.libs = ['NodeJS', 'AngularJS', 'GulpJS', 'Bower', 'jQuery', 'Bootstrap', 'font-awesome'];
 	}
 })();

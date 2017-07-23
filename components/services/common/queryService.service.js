@@ -36,7 +36,7 @@
   angular
     .module('boilerplate')
     .factory('Query', [
-      '$http', '$q', 'CONSTANTS', 'LocalStorage', Query
+      '$http', '$q', 'CONSTANTS', '$localStorage', Query
     ]);
 
 
@@ -45,7 +45,7 @@
 
 
 
-  function Query($http, $q, CONSTANTS, LocalStorage) {
+  function Query($http, $q, CONSTANTS, $localStorage) {
 
 
     var service = {
@@ -62,7 +62,7 @@
 
       var deferred = $q.defer();
       var token = undefined;
-      if (request.addToken) token = LocalStorage.get('token') || undefined;
+      if (request.addToken) token = $localStorage.token || undefined;
 
       $http({
         async: true,

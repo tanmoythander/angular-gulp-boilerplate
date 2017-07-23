@@ -4,17 +4,18 @@
 	<a ui-sref="home" class="btn btn-primary btn-lg">Home</a>
 </div>
 
-<div class="row">
+<div class="container">
+	<div class="row">
 
-	<div class="col-sm-6">
-		<div ui-view="columnOne"></div>
+		<div class="col-sm-4">
+			<div ui-view="columnOne"></div>
+		</div>
+
+
+		<div class="col-sm-8">
+			<div ui-view="columnTwo"></div>
+		</div>
 	</div>
-
-
-	<div class="col-sm-6">
-		<div ui-view="columnTwo"></div>
-	</div>
-
-    
 </div>
+	
 <boilerplate-footer></boilerplate-footer>

@@ -62,35 +62,34 @@
 
 		<!-- Angular components -->
 		<!-- build:appcomponents js/appcomponents.js -->
-		<script type="text/javascript" src="app/app.js"></script>
-		<script type="text/javascript" src="app/config.js"></script>
-
-			<!-- Services -->
-			<script type="text/javascript" src="components/services/LocalStorage.service.js"></script>
-			<script type="text/javascript" src="components/services/queryService.service.js"></script>
-
-			<!-- Common services -->
-			<script type="text/javascript" src="components/services/common/common.validation.js"></script>
-
-			<!-- Controllers -->
-			<script type="text/javascript" src="components/controllers/scotch.controller.js"></script>
-			<script type="text/javascript" src="components/controllers/list.controller.js"></script>
+		<script type="text/javascript" src="app/app-config.js"></script>
 
 			<!-- directives -->
 			<script type="text/javascript" src="components/directives/footer.directive.js"></script>
+
+			<!-- Constants -->
+			<script type="text/javascript" src="app/constants.js"></script>
+
+			<!-- Services -->
+			<script type="text/javascript" src="components/services/common/common.validation.js"></script>
+			<script type="text/javascript" src="components/services/common/queryService.service.js"></script>
+
+			<!-- Controllers -->
+			<script type="text/javascript" src="components/controllers/command.controller.js"></script>
+			<script type="text/javascript" src="components/controllers/list.controller.js"></script>
 		<!-- endbuild -->
 
 		<!-- Application sections -->
 		<!-- build:mainapp js/mainapp.js -->
-		<script type="text/javascript" src="app/factory.js"></script>
-		<script type="text/javascript" src="app/controller.js"></script>
+
+
 		<!-- endbuild -->
 
 		<!-- templates from $templateCache -->
 		<!-- build:templates -->
 		<!-- endbuild -->
 		
-		<!-- Google Analytics: change QUANTIC-DYNAMICS-PORTAL to be your site's ID. -->
+		<!-- Google Analytics: change YOUR-SITE-ID to be your site's ID. -->
 		<script>
 			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
 			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
