@@ -15,8 +15,23 @@
 
 	function config($stateProvider, $urlRouterProvider) {
 
-		$urlRouterProvider.otherwise('/home');
+		// Handles wrong and empty urls
+		$urlRouterProvider.otherwise(function($injector, $location) {
+			if ($location.path().length > 1) return '/404';
+			else return '/home';
+		});
 
+		// Handles case-insensitive urls
+		$urlRouterProvider.rule(function($injector, $location) {
+			var path = $location.path();
+			var normalized = path.toLowerCase();
+
+			if (path !== normalized) {
+				return normalized;
+			}
+		});
+
+		// Handles Redirects
 		$urlRouterProvider.when('/user', '/home');
 
 		$stateProvider
