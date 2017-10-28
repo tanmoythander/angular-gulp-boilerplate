@@ -1,21 +1,23 @@
-<div class="jumbotron text-center">
-	<h1>The About Page</h1>
-	<p>This app uses Angular <span class="text-danger">UI Router</span></p>
-	<a ui-sref="home" class="btn btn-primary btn-lg">Home</a>
-</div>
+<div id="about">
+	<div class="jumbotron text-center">
+		<h1>The About Page</h1>
+		<p>This app uses Angular <span class="text-danger">UI Router</span></p>
+		<a ui-sref="home" class="btn btn-primary btn-lg">Home</a>
+	</div>
 
-<div class="container">
-	<div class="row">
+	<div class="container">
+		<div class="row">
 
-		<div class="col-sm-4">
-			<div ui-view="columnOne"></div>
-		</div>
+			<div class="col-sm-4">
+				<div ui-view="columnOne"></div>
+			</div>
 
 
-		<div class="col-sm-8">
-			<div ui-view="columnTwo"></div>
+			<div class="col-sm-8">
+				<div ui-view="columnTwo"></div>
+			</div>
 		</div>
 	</div>
 </div>
-	
+
 <boilerplate-footer></boilerplate-footer>

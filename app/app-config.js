@@ -32,7 +32,7 @@
 		});
 
 		// Handles Redirects
-		$urlRouterProvider.when('/user', '/home');
+		$urlRouterProvider.when('/home', '/home/libs');
 
 		$stateProvider
 
