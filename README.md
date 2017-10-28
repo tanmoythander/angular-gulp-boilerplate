@@ -20,7 +20,7 @@ you should see some version info in return.<br><br>
 
 <b>2. install global packages</b>(run on any directory)
 
-	npm install -g bower gulp marked node-gyp
+	npm install -g gulp marked node-gyp
 
 in case of mac, you might need to mention "sudo"<br><br>
 

@@ -7,6 +7,15 @@
 	ListController.$inject = ['$scope'];
 
 	function ListController($scope) {
-		$scope.libs = ['NodeJS', 'AngularJS', 'GulpJS', 'Bower', 'jQuery', 'Bootstrap', 'font-awesome'];
+		$scope.libs = [
+			'NodeJS',
+			'AngularJS',
+			'GulpJS',
+			'jQuery',
+			'lodash',
+			'Bootstrap',
+			'font-awesome',
+			'owl-carousel-2'
+		];
 	}
 })();

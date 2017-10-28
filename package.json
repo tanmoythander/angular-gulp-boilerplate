@@ -1,6 +1,6 @@
 {
   "name": "boilerplate",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "license": "MIT",
   "description": "Front-end application source boilerplate",
   "main": "app/app.js",
@@ -39,7 +39,7 @@
     "build": "gulp build",
     "server": "gulp server",
     "serverbuild": "gulp server-build",
-    "postinstall": "npm install gulp-sass gulp-imagemin --save&&bower install --no-interactive&&gulp server-build"
+    "postinstall": "npm install gulp-sass gulp-imagemin --save&&gulp server-build"
   },
   "repository": {
     "type": "github",
@@ -47,7 +47,11 @@
   },
   "author": "Tanmoy Thander",
   "dependencies": {
-    "gulp-imagemin": "^3.3.0",
-    "gulp-sass": "^3.1.0"
+    "angular": "1.5.11",
+    "angular-resource": "~1.5.8",
+    "angular-ui-router": "^0.4.3",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-sass": "^3.1.0",
+    "ngstorage": "^0.3.11"
   }
 }
