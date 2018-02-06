@@ -48,7 +48,7 @@ It will download all the dependencies, build the project and serve the build on 
 
 	gulp
 
-you should see the browser window pointing on localhost:3000 (opens another port if uvailable)<br><br>
+you should see the browser window opening address http://localhost:3000 (opens another port if unavailable)<br><br>
 
 <b>2. Build the source (Deployment Mode)</b>
 
@@ -61,13 +61,13 @@ build files will be saved under <b>./_build</b> directory<br><br>
 
 	gulp server
 
-you should see the browser window pointing on localhost:3000 (opens another port if uvailable)<br><br>
+you should see the browser window opening address http://localhost:3000 (opens another port if unavailable)<br><br>
 
 <b>4. Serve from build (<b>./_build/</b>) without watch (Build Testing Mode)</b>
 
 	gulp server-build
 
-you should see the browser window pointing on localhost:3000 (opens another port if uvailable)<br><br>
+you should see the browser window opening address http://localhost:3000 (opens another port if unavailable)<br><br>
 
 <h2>Developer Hint</h2>
 
