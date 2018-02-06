@@ -1,5 +1,7 @@
 <h1>Angular Gulp Boilerplate</h1>
 
+<b>Quickly start</b> your angularJS project,<br>develope with flexibility using <b>dev command line tools</b> and<br>build a deploy version with <b>source minification</b>.<br><br>
+
 
 <h2>Installing on local machine</h2>
 
@@ -20,19 +22,19 @@ you should see some version info in return.<br><br>
 
 <b>2. install global packages</b>(run on any directory)
 
-	npm install -g gulp marked node-gyp
+	npm install -g gulp node-gyp
 
-in case of mac, you might need to mention "sudo"<br><br>
+in case of mac or linux, you might need to mention "sudo"<br><br>
 
 
-<b>3. now go to the directory where you want to place the project files using git bash (terminal for mac)</b><br>
+<b>3. now go to the directory where you want to place the project files using git bash (terminal for mac or linux)</b><br>
 run the command
 
 	git clone URL
 
 here URL is the http url you get from the repository page, <a href="https://github.com/tanmoythander/angular-gulp-boilerplate">Click here to clone</a><br><br>
 
-<b>4. now navigate to the project directory with cmd (terminal for mac)</b><br>
+<b>4. now navigate to the project directory with cmd (terminal for mac or linux)</b><br>
 run the command
 
 	npm install
@@ -46,7 +48,7 @@ It will download all the dependencies, build the project and serve the build on 
 
 	gulp
 
-you should see the browser window pointing on localhost:3000<br><br>
+you should see the browser window pointing on localhost:3000 (opens another port if uvailable)<br><br>
 
 <b>2. Build the source (Deployment Mode)</b>
 
@@ -59,13 +61,13 @@ build files will be saved under <b>./_build</b> directory<br><br>
 
 	gulp server
 
-you should see the browser window pointing on localhost:3000<br><br>
+you should see the browser window pointing on localhost:3000 (opens another port if uvailable)<br><br>
 
 <b>4. Serve from build (<b>./_build/</b>) without watch (Build Testing Mode)</b>
 
 	gulp server-build
 
-you should see the browser window pointing on localhost:3000<br><br>
+you should see the browser window pointing on localhost:3000 (opens another port if uvailable)<br><br>
 
 <h2>Developer Hint</h2>
 
