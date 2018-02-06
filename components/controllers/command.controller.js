@@ -13,10 +13,12 @@
 		$scope.commands = [
 			{
 				command: 'gulp',
+				// eslint-disable-next-line max-len
 				details: 'Serves the source code. Helpful for development. Watches for file change and synchronizes with browser to show the difference'
 			},
 			{
 				command: 'gulp build',
+				// eslint-disable-next-line max-len
 				details: 'Builds the source and puts it into ./_build directory. Cleans the previous build. Helpful for deployment'
 			},
 			{
@@ -29,6 +31,7 @@
 			},
 			{
 				command: 'gulp server-build',
+				// eslint-disable-next-line max-len
 				details: 'Serves the build. Helps to test the build before deployment'
 			}
 		];
