@@ -42,7 +42,7 @@ It will download all the dependencies, build the project and serve the build on 
 
 <h2>Using the gulp commands</h2>
 
-<b>1. Serve from source with watch (Development Mode)</b>
+<b>1. Serve from source (<b>./</b>) with watch (Development Mode)</b>
 
 	gulp
 
@@ -52,15 +52,16 @@ you should see the browser window pointing on localhost:3000<br><br>
 
 	gulp build
 
-it will delete previous build !!!<br><br>
+it will delete previous build !!!<br>
+build files will be saved under <b>./_build</b> directory<br><br>
 
-<b>3. Serve from source without watch (Source Testing Mode)</b>
+<b>3. Serve from source (<b>./</b>) without watch (Source Testing Mode)</b>
 
 	gulp server
 
 you should see the browser window pointing on localhost:3000<br><br>
 
-<b>4. Serve from _build without watch (Build Testing Mode)</b>
+<b>4. Serve from build (<b>./_build/</b>) without watch (Build Testing Mode)</b>
 
 	gulp server-build
 
