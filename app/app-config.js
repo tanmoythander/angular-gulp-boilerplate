@@ -7,7 +7,7 @@
 		'ngStorage',
 		'ngResource'
 	])
-	.config(config);
+		.config(config);
 
 	// safe dependency injection
 	// this prevents minification issues
@@ -45,17 +45,18 @@
 				url: '/home',
 				templateUrl: 'views/partial-home.html'
 			})
-				.state('home.libs', {
-					url: '/libs',
-					templateUrl: 'views/partial-home-list.html',
-					controller: 'ListController'
-				})
+			.state('home.libs', {
+				url: '/libs',
+				templateUrl: 'views/partial-home-list.html',
+				controller: 'ListController'
+			})
 
-				// nested list with just some random string data
-				.state('home.usage', {
-					url: '/usage',
-					template: '<h4>Use this recipy to quickly start a production level development.<br>Also helpful for beginners who wish to understand the basic digest system of angularJS and how to accelerate the development and building tasks with task automation.<br><br>You are free to modify, distribute and sell.</h4>'
-				})
+			// nested list with just some random string data
+			.state('home.usage', {
+				url: '/usage',
+				// eslint-disable-next-line max-len
+				template: '<h4>Use this recipy to quickly start a production level development.<br>Also helpful for beginners who wish to understand the basic digest system of angularJS and how to accelerate the development and building tasks with task automation.<br><br>You are free to modify, distribute and sell.</h4>'
+			})
 
 			// ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
 			.state('about', {
@@ -65,17 +66,16 @@
 						templateUrl: 'views/partial-about.html'
 					},
 					'columnOne@about': {
+						// eslint-disable-next-line max-len
 						template: '<p style="padding-top: 25px;">Those who are new to angularJS they must have a question in mind, "How to run the angular properly?"<br><br>Well, this tiny gulp tool built on NodeJS can run the angular source in the browser and watch for file changes while you are developing.<br>When you are deploying the project, you can just minify the source to prevent you source from being stolen as well as reduce the build size remarkably.</p>'
 					},
-					'columnTwo@about': { 
+					'columnTwo@about': {
 						templateUrl: 'views/table-data.html',
 						controller: 'CommandController'
 					}
 				}
 			});
 	}
-
-
 
 	/**
 	 * Run block
@@ -87,8 +87,7 @@
 	run.$inject = ['$rootScope', '$state'];
 
 	function run($rootScope, $state) {
-
-
+		// put here everything that you need to run on page reload
 	}
 
 
