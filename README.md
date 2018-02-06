@@ -1,7 +1,7 @@
 <h1>Angular Gulp Boilerplate</h1>
 
-<b>Quickly start your angularJS project,<br>develope with flexibility using dev command line tools and<br>build a deploy version with source minification.</b>
-<br><br><br><br>
+<b>Quickly start your angularJS project, develope with flexibility using dev command line tools and build a deploy version with source minification.</b>
+<br>
 
 <h2>Installing on local machine</h2>
 
