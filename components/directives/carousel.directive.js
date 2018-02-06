@@ -1,19 +1,19 @@
 ;(function() {
 
-  'use strict';
+	'use strict';
 
-  angular.module('boilerplate')
-    .directive('boilerplateCarousel', boilerplateCarousel);
+	angular.module('boilerplate')
+		.directive('boilerplateCarousel', boilerplateCarousel);
 
-  function boilerplateCarousel () {
+	function boilerplateCarousel () {
 
-    // Definition of directive
-    var directiveDefinitionObject = {
-      restrict: 'E',
-      templateUrl: 'components/directives/carousel.html'
-    };
+		// Definition of directive
+		var directiveDefinitionObject = {
+			restrict: 'E',
+			templateUrl: 'components/directives/carousel.html'
+		};
 
-    return directiveDefinitionObject;
-  }
+		return directiveDefinitionObject;
+	}
 
 })();
