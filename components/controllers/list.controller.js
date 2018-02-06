@@ -11,6 +11,7 @@
 			'NodeJS',
 			'AngularJS',
 			'GulpJS',
+			'ESlint',
 			'jQuery',
 			'lodash',
 			'Bootstrap',

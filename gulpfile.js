@@ -11,11 +11,35 @@
  * 
  */
 var gulp = require('gulp');
+var eslint = require('gulp-eslint');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var $ = require('gulp-load-plugins')();
 var del = require('del');
 var runSequence = require('run-sequence');
+
+var jsConfig = {
+	extends: 'eslint:recommended',
+	rules: {
+		'quotes': [1, 'single'],
+		'curly': [1, 'multi-line'],
+		'no-extra-parens': 1,
+		'key-spacing': [1, {
+			'beforeColon': false,
+			'afterColon': true,
+			'mode': 'strict'
+		}],
+		'no-multi-spaces': 1,
+		'dot-location': [1, 'property'],
+		'max-len': [1, { 'code': 80, 'tabWidth': 2 }],
+		'no-trailing-spaces': 1,
+		'indent': [1, 'tab'],
+		'no-empty-function': 2,
+		'eol-last': [2, 'always'],
+		'semi': [2, 'always'],
+		'no-multiple-empty-lines': 2
+	}
+};
 
 
 // optimize images
@@ -238,6 +262,22 @@ gulp.task('css:size', function() {
 		}));
 });
 
+// lint javascript
+gulp.task('js:lint', function() {
+	// eslint-disable-next-line
+	return gulp.src(['app/**/*.js', 'components/**/*.js', 'js/**/*.js', '!js/nonangular/*'])
+		.pipe(eslint(jsConfig))
+		.pipe(eslint.format());
+});
+// build lint javascript
+gulp.task('js:lint-build', function() {
+	// eslint-disable-next-line
+	return gulp.src(['app/**/*.js', 'components/**/*.js', 'js/**/*.js', '!js/nonangular/*'])
+		.pipe(eslint(jsConfig))
+		.pipe(eslint.format())
+		.pipe(eslint.failAfterError());
+});
+
 
 /////////////////////////////////////////////
 /////////				GULP COMMANDS				/////////
@@ -256,15 +296,15 @@ gulp.task('server', function(done) {
 // default task to be run with `gulp` command
 // this default task will run BrowserSync & then use Gulp to watch files.
 // when a file is changed, an event is emitted to BrowserSync with the filepath.
-gulp.task('default', ['browser-sync', 'html:size', 'src:js:size', 'minify-css'], function() {
+gulp.task('default', ['browser-sync', 'html:size', 'src:js:size', 'minify-css', 'js:lint'], function() {
 	gulp.watch('styles/*.css', function(file) {
 		if (file.type === "changed") {
 			reload(file.path);
 		}
 	});
 	gulp.watch(['*.html', 'components/**/*.html', 'views/**/*.html'], ['bs-reload', 'html:size']);
-	gulp.watch(['app/**/*.js', 'components/**/*.js', 'js/**/*.js'], ['bs-reload', 'src:js:size']);
-	gulp.watch(['./styles/**/*.css'], ['minify-css']);
+	gulp.watch(['app/**/*.js', 'components/**/*.js', 'js/**/*.js'], ['bs-reload', 'src:js:size', 'js:lint']);
+	gulp.watch(['./styles/**/*.css'], ['bs-reload', 'minify-css']);
 });
 
 /**
@@ -281,6 +321,7 @@ gulp.task('default', ['browser-sync', 'html:size', 'src:js:size', 'minify-css'],
  */
 gulp.task('build', function(callback) {
 	runSequence(
+		'js:lint-build',
 		'clean:build',
 		'images',
 		'templates',
@@ -296,6 +337,7 @@ gulp.task('build', function(callback) {
 // start webserver from _build folder to check how it will look in production
 gulp.task('server-build', function(callback) {
 	runSequence(
+		'js:lint-build',
 		'clean:build',
 		'images',
 		'templates',
