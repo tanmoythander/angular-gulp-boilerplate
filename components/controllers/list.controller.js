@@ -14,7 +14,7 @@
 			'ESlint',
 			'jQuery',
 			'lodash',
-			'Bootstrap',
+			'Bootstrap 4.1',
 			'font-awesome',
 			'owl-carousel-2'
 		];
