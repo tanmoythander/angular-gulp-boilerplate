@@ -18,7 +18,7 @@
 		// Handles wrong and empty urls
 		$urlRouterProvider.otherwise(function($injector, $location) {
 			if ($location.path().length > 1) return '/404';
-			else return '/home';
+			else return '/demo-home';
 		});
 
 		// Handles case-insensitive urls
@@ -32,7 +32,7 @@
 		});
 
 		// Handles Redirects
-		$urlRouterProvider.when('/home', '/home/libs');
+		$urlRouterProvider.when('/demo-home', '/demo-home/libs');
 
 		$stateProvider
 
@@ -41,36 +41,36 @@
 				template: '<h1>404 Not Found</h1>'
 			})
 
-			.state('home', {
-				url: '/home',
-				templateUrl: 'views/partial-home.html'
+			.state('demo-home', {
+				url: '/demo-home',
+				templateUrl: 'views/demo-home.html'
 			})
-			.state('home.libs', {
+			.state('demo-home.libs', {
 				url: '/libs',
-				templateUrl: 'views/partial-home-list.html',
+				templateUrl: 'views/demo-home-list.html',
 				controller: 'ListController'
 			})
 
 			// nested list with just some random string data
-			.state('home.usage', {
+			.state('demo-home.usage', {
 				url: '/usage',
 				// eslint-disable-next-line max-len
 				template: '<h4>Use this recipy to quickly start a production level development.<br>Also helpful for beginners who wish to understand the basic digest system of angularJS and how to accelerate the development and building tasks with task automation.<br><br>You are free to modify, distribute and sell.</h4>'
 			})
 
 			// ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-			.state('about', {
-				url: '/about',
+			.state('demo-about', {
+				url: '/demo-about',
 				views: {
 					'': {
-						templateUrl: 'views/partial-about.html'
+						templateUrl: 'views/demo-about.html'
 					},
-					'columnOne@about': {
+					'columnOne@demo-about': {
 						// eslint-disable-next-line max-len
 						template: '<p style="padding-top: 25px;">Those who are new to angularJS they must have a question in mind, "How to run the angular properly?"<br><br>Well, this tiny gulp tool built on NodeJS can run the angular source in the browser and watch for file changes while you are developing.<br>When you are deploying the project, you can just minify the source to prevent you source from being stolen as well as reduce the build size remarkably.</p>'
 					},
-					'columnTwo@about': {
-						templateUrl: 'views/table-data.html',
+					'columnTwo@demo-about': {
+						templateUrl: 'views/demo-table-data.html',
 						controller: 'CommandController'
 					}
 				}
