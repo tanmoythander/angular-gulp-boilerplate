@@ -40,7 +40,7 @@
     "build": "gulp build",
     "server": "gulp server",
     "serverbuild": "gulp server-build",
-    "postinstall": "npm install gulp-sass gulp-imagemin --save&&gulp server-build"
+    "postinstall": "npm install gulp-imagemin&&gulp server-build"
   },
   "repository": {
     "type": "github",
@@ -55,6 +55,7 @@
     "gulp-imagemin": "^3.4.0",
     "gulp-sass": "^3.2.1",
     "jquery": "^3.3.1",
-    "ngstorage": "^0.3.11"
+    "ngstorage": "^0.3.11",
+    "popper.js": "^1.14.3"
   }
 }
