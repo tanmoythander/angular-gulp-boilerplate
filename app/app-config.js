@@ -11,9 +11,15 @@
 
 	// safe dependency injection
 	// this prevents minification issues
-	config.$inject = ['$stateProvider', '$urlRouterProvider'];
+	config.$inject = ['$stateProvider',
+		'$urlRouterProvider', '$locationProvider'];
 
-	function config($stateProvider, $urlRouterProvider) {
+	function config($stateProvider,
+		$urlRouterProvider, $locationProvider) {
+
+		// URL configuration
+		$locationProvider
+			.html5Mode(false).hashPrefix('');
 
 		// Handles wrong and empty urls
 		$urlRouterProvider.otherwise(function($injector, $location) {
