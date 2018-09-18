@@ -1,14 +1,14 @@
-#home {
+#demo-home {
 	background: white;
 }
-#home .container {
+#demo-home .container {
 	padding: 40px 15px;
 	min-height: 500px;
 }
-#about {
+#demo-about {
 	background: white;
 }
-#about .container {
+#demo-about .container {
 	padding: 40px 15px;
 	min-height: 500px;
 }
