@@ -94,11 +94,17 @@ function images() {
 	var images = size();
 	return gulp.src('./images/**/*')
 		.pipe(changed('./_build/images'))
-		.pipe(imagemin({
-			optimizationLevel: 3,
-			progressive: true,
-			interlaced: true
-		}))
+		.pipe(imagemin([
+			imagemin.gifsicle({interlaced: true}),
+			imagemin.jpegtran({progressive: true}),
+			imagemin.optipng({optimizationLevel: 5}),
+			imagemin.svgo({
+				plugins: [
+					{removeViewBox: true},
+					{cleanupIDs: false}
+				]
+			})
+    ]))
 		.pipe(gulp.dest('./_build/images'))
 		.pipe(images)
 		.pipe(notify({
@@ -152,7 +158,7 @@ function minCssJs() {
 		.pipe(gulp.dest('./_build/'));
 }
 
-// size
+// File sizes
 function sourceTemplateSize() {
 	var sourceTemplate = size();
 	return gulp.src(['*.html',
@@ -174,6 +180,17 @@ function sourceJsSize() {
 			onLast: true,
 			message: function() {
 				return 'Source JS size ' + sourceJs.prettySize;
+			}
+		}));
+}
+function sourceCssSize() {
+	var sourceCss = size();
+	return gulp.src('./styles/**/*.css')
+		.pipe(sourceCss)
+		.pipe(notify({
+			onLast: true,
+			message: function() {
+				return 'Source CSS size ' + sourceCss.prettySize;
 			}
 		}));
 }
@@ -244,7 +261,8 @@ function watch() {
 		gulp.parallel(syncReload, sourceTemplateSize));
 	gulp.watch(['app/**/*.js', 'components/**/*.js', 'js/**/*.js'],
 		gulp.parallel(syncReload, sourceJsSize, lint));
-	gulp.watch('./styles/**/*.css', syncReload);
+	gulp.watch('./styles/**/*.css', 
+		gulp.parallel(syncReload, sourceCssSize));
 }
 
 // define output tasks
