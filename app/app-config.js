@@ -49,11 +49,11 @@
 
 			.state('demo-home', {
 				url: '/demo-home',
-				templateUrl: 'views/demo-home.html'
+				templateUrl: '/views/demo-home.html'
 			})
 			.state('demo-home.libs', {
 				url: '/libs',
-				templateUrl: 'views/demo-home-list.html',
+				templateUrl: '/views/demo-home-list.html',
 				controller: 'ListController'
 			})
 
@@ -69,14 +69,14 @@
 				url: '/demo-about',
 				views: {
 					'': {
-						templateUrl: 'views/demo-about.html'
+						templateUrl: '/views/demo-about.html'
 					},
 					'columnOne@demo-about': {
 						// eslint-disable-next-line max-len
 						template: '<p style="padding-top: 25px;">Those who are new to angularJS they must have a question in mind, "How to run the angular properly?"<br><br>Well, this tiny gulp tool built on NodeJS can run the angular source in the browser and watch for file changes while you are developing.<br>When you are deploying the project, you can just minify the source to prevent you source from being stolen as well as reduce the build size remarkably.</p>'
 					},
 					'columnTwo@demo-about': {
-						templateUrl: 'views/demo-table-data.html',
+						templateUrl: '/views/demo-table-data.html',
 						controller: 'CommandController'
 					}
 				}
