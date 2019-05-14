@@ -94,17 +94,7 @@ function images() {
 	var images = size();
 	return gulp.src('./images/**/*')
 		.pipe(changed('./_build/images'))
-		.pipe(imagemin([
-			imagemin.gifsicle({interlaced: true}),
-			imagemin.jpegtran({progressive: true}),
-			imagemin.optipng({optimizationLevel: 5}),
-			imagemin.svgo({
-				plugins: [
-					{removeViewBox: true},
-					{cleanupIDs: false}
-				]
-			})
-    ]))
+		.pipe(imagemin())
 		.pipe(gulp.dest('./_build/images'))
 		.pipe(images)
 		.pipe(notify({
