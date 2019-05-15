@@ -10,12 +10,12 @@
 		$scope.libs = [
 			'NodeJS',
 			'AngularJS',
-			'GulpJS',
+			'GulpJS v4.0.2',
 			'ESlint',
-			'jQuery',
+			'jQuery v3.4',
 			'lodash',
-			'Bootstrap 4.1',
-			'font-awesome',
+			'Bootstrap v4.1',
+			'font-awesome v4.7',
 			'owl-carousel-2'
 		];
 	}

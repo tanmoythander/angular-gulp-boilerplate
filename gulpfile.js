@@ -77,7 +77,7 @@ function cleanBuild(done) {
 // fonts
 function fonts() {
 	var fonts = size();
-	return gulp.src('./fonts/**/*.{ttf,woff,woff2,eof,eot,svg}')
+	return gulp.src('./fonts/*.{ttf,woff,woff2,eof,eot,svg}')
 		.pipe(changed('./_build/fonts'))
 		.pipe(gulp.dest('./_build/fonts'))
 		.pipe(fonts)
@@ -92,9 +92,11 @@ function fonts() {
 // images
 function images() {
 	var images = size();
-	return gulp.src('./images/**/*')
+	return gulp.src('./images/*.{gif,jpg,jpeg,png}')
 		.pipe(changed('./_build/images'))
-		.pipe(imagemin())
+		.pipe(imagemin({
+			verbose: true
+		}))
 		.pipe(gulp.dest('./_build/images'))
 		.pipe(images)
 		.pipe(notify({
@@ -259,8 +261,8 @@ function watch() {
 exports.default = gulp.parallel(watch, syncSource);
 exports.serveSource = syncSource;
 exports.build = gulp.series(lintBuild, cleanBuild,
-	images, fonts, cacheTemplate, minCssJs,
+	cacheTemplate, minCssJs, images, fonts,
 	gulp.parallel(buildCssSize, buildJsSize, buildSize));
 exports.serveBuild = gulp.series(lintBuild, cleanBuild,
-	images, fonts, cacheTemplate, minCssJs,
+	cacheTemplate, minCssJs, images, fonts,
 	gulp.parallel(buildCssSize, buildJsSize, buildSize, syncBuild));
