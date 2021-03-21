@@ -5,7 +5,7 @@
   "description": "Front-end application source boilerplate",
   "main": "app/app.js",
   "devDependencies": {
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.26.14",
     "del": "^1.1.1",
     "gulp": "^4.0.2",
     "gulp-angular-templatecache": "^1.6.0",
@@ -34,11 +34,11 @@
   "author": "Tanmoy Thander",
   "dependencies": {
     "@uirouter/angularjs": "^1.0.20",
-    "angular": "^1.7.5",
+    "angular": "^1.8.2",
     "angular-resource": "~1.5.8",
     "bootstrap": "^4.1.3",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.6.0",
     "ngstorage": "^0.3.11",
     "popper.js": "^1.14.6",
     "request": "^2.88.0"
